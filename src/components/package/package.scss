@@ -1,0 +1,99 @@
+@use '../../App.scss' as *;
+
+.package-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .package-form {
+    background-color: $primary-color; 
+    padding: 20px 80px;
+    height: 800px;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative; 
+    overflow: hidden; 
+    backdrop-filter: blur(50px); 
+  }
+  
+  /* Add the transparent background image using ::before */
+  .package-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../images/package2.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Make the image 20% visible */
+    pointer-events: none; /* Ensures the image does not interfere with form interactions */
+    z-index: -1; /* Ensures the image stays behind the form content */
+  }
+  .package-form h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: $text-color;
+    font-family: $font-family-main;
+  }
+  
+  .package-form p {
+    font-size: 14px;
+    color: $text-color;
+    margin-bottom: 20px;
+    font-family: $font-family-main;
+    line-height: 1.5em;
+    font-weight: 400;
+  }
+  
+  .package-form label {
+    display: block;
+    font-family: $font-family-main;
+    margin-top: 35px;
+    font-size: 14px;
+    color: $text-color;
+    font-weight: 600;
+    text-align: start;
+  }
+  
+  .package-form input,
+  .package-form select,
+  .package-form textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .package-form textarea {
+    resize: none;
+  }
+  
+  .package-form .submit-button {
+    margin-top: 20px;
+    background-color: transparent; /* Make the background transparent */
+    color: #fff; /* Text color is white */
+    padding: 10px 20px;
+    border: 2px solid #fff; /* White border */
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  
+    /* On hover */
+    &:hover {
+      background-color: #fff; /* White background on hover */
+      color: rgb(193, 85, 13); /* Text color changes to orange */
+      border-color: rgb(193, 85, 13); /* Border color also turns orange */
+    }
+  }
+  
+  

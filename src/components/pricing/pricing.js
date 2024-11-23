@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import pricingHeaderImg from '../../images/pricing.png';
 import rightIcon from '../../images/right.png';
 import './pricing.scss';
 
 function Pricing() {
+  const navigate = useNavigate(); // React Router's navigation hook
+
+  const handleGetStarted = () => {
+    navigate('/package'); // Navigate to the Package page
+  };
+
   return (
     <div className="pricing">
       {/* Header Section */}
@@ -21,10 +28,12 @@ function Pricing() {
           <span className="power">Power</span>
           <span className="gym">Gym</span>
           <span className="join"> Family</span>
-        </h2><center>
-        <p className="family-description">
-          At PowerGym, we offer flexible membership plans to suit your fitness goals, whether you're a beginner or seeking advanced programs. Access our top facilities and expert guidance, all at affordable prices. Join today and start your fitness journey with the support you need to succeed.
-        </p></center>
+        </h2>
+        <center>
+          <p className="family-description">
+            At PowerGym, we offer flexible membership plans to suit your fitness goals, whether you're a beginner or seeking advanced programs. Access our top facilities and expert guidance, all at affordable prices. Join today and start your fitness journey with the support you need to succeed.
+          </p>
+        </center>
       </section>
 
       {/* Pricing Cards */}
@@ -85,7 +94,7 @@ function Pricing() {
                 </li>
               ))}
             </ul>
-            <button className="card-button">GET STARTED</button>
+            <button className="card-button" onClick={handleGetStarted}>GET STARTED</button>
           </div>
         ))}
       </section>

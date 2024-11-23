@@ -387,7 +387,13 @@
       border: 2px solid $primary-color;
       border-radius: 10px;
       cursor: pointer;
+    
+      /* Center the text vertically and horizontally */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    
   
 
   /* Center Card (Orange background) */
@@ -524,13 +530,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
 }
 
 /* Left Side: Text */
 .text-section h2 {
-  margin-left: 40px;
+  text-align: start;
   font-family: $font-family-main; /* Main font for "Stay Connected" */
   font-size: 32px;
   font-weight: 500;
@@ -550,7 +556,6 @@
 }
 
 .text-section p {
-  margin-left: 40px;
   width: 550px;
   font-family: $font-family-main;
   font-size: 14px;

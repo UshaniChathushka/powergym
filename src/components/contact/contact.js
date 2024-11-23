@@ -18,6 +18,7 @@ function Contact() {
 
             {/* Contact Form and Information Section */}
             <section className="contact-section">
+                {/* Form Section */}
                 <div className="form-container">
                     <h2>Send Us a Message</h2>
                     <p>Have a question or need more information? Use the form below to get in touch with us.</p>
@@ -38,20 +39,36 @@ function Contact() {
                     </form>
                 </div>
 
-                {/* Contact Information Section */}
-                <div className="contact-info">
-                    <h3>Our Contact Information</h3>
-                    <div className="contact-item">
-                        <img src={contactIcon} alt="Contact Icon" />
-                        <p>+1 (555) 123-4567</p>
+                {/* Contact Info with Map */}
+                <div className="info-with-map">
+                    <div className="contact-info">
+                        <h3>Our Contact Information</h3>
+                        <div className="contact-item">
+                            <img src={contactIcon} alt="Contact Icon" />
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div className="contact-item">
+                            <img src={emailIcon} alt="Email Icon" />
+                            <p>info@powergym.com</p>
+                        </div>
+                        <div className="contact-item">
+                            <img src={locationIcon} alt="Location Icon" />
+                            <p>123 Fitness Ave, Los Angeles, CA 90001</p>
+                        </div>
                     </div>
-                    <div className="contact-item">
-                        <img src={emailIcon} alt="Email Icon" />
-                        <p>info@powergym.com</p>
-                    </div>
-                    <div className="contact-item">
-                        <img src={locationIcon} alt="Location Icon" />
-                        <p>123 Fitness Ave, Los Angeles, CA 90001</p>
+
+                    {/* Map Section */}
+                    <div className="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25161.61104743517!2d-118.28735929337076!3d33.96878790918895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c9062226fb1d%3A0xf36457ee888c3600!2sLos%20Angeles%2C%20CA%2090001%2C%20USA!5e1!3m2!1sen!2slk!4v1732335040701!5m2!1sen!2slk"
+                            width="536"
+                            height="458"
+                            style={{ border: "0" }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="powergym"
+                        ></iframe>
                     </div>
                 </div>
             </section>

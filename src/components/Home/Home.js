@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Coach1 from "../../images/coach1.png";
 import Coach2 from "../../images/coach2.png";
 import Coach3 from "../../images/coach3.png";
@@ -16,6 +17,8 @@ import XIcon from "../../images/X.png";
 import './Home.scss';
 
 function Home() {
+  const navigate = useNavigate(); // useNavigate hook to navigate programmatically
+
   return (
     <div className="home">
       {/* Header Section */}
@@ -26,7 +29,7 @@ function Home() {
           <span className="line-three">STRENGTH!</span>
         </h1>
         <p>Achieve your goals with expert trainers, energizing classes, and a supportive community. Start your journey today!</p>
-        <button className="join-now">JOIN NOW</button>
+        <button className="join-now" onClick={() => navigate('/pricing')}>JOIN NOW</button>
         <br /><br />
         <div className="stats-container">
           <div className="stat-item">
@@ -85,73 +88,73 @@ function Home() {
           </div>
         </div>
 
-        <button className="join-now">JOIN NOW</button>
+        <button className="join-now" onClick={() => navigate('/pricing')}>JOIN NOW</button>
       </section>
 
-{/* Welcome Section */}
-<section className='welcome'>
-  <div className="welcome-text">
-    <h2 className="welcome-title">
-      Welcome to <span className="power-gym">Power</span><span className="gym">Gym</span>?
-    </h2>
-    <p>
-      PowerGym is a premier fitness facility committed to helping individuals achieve their health and fitness goals. With state-of-the-art equipment, certified trainers, and a motivating environment, we provide personalized fitness programs tailored to all levels. Our focus is on delivering results, fostering a supportive community, and ensuring every member has the tools to succeed. At PowerGym, we believe in empowering individuals to live healthier, more active lives.
-    </p>
-    <button className='learn-more'>LEARN MORE</button>
-  </div>
-  <div className="welcome-images">
-    <div className="image-column">
-      <img src={section3Img} alt="Fitness Equipment" className="welcome-image"/>
-      <img src={section3Img3} alt="Personal Training Session" className="welcome-image"/>
-    </div>
-    <img src={section3Img2} alt="Group Workout" className="welcome-image-large"/>
-  </div>
-</section>
+      {/* Welcome Section */}
+      <section className='welcome'>
+        <div className="welcome-text">
+          <h2 className="welcome-title">
+            Welcome to <span className="power-gym">Power</span><span className="gym">Gym</span>?
+          </h2>
+          <p>
+            PowerGym is a premier fitness facility committed to helping individuals achieve their health and fitness goals. With state-of-the-art equipment, certified trainers, and a motivating environment, we provide personalized fitness programs tailored to all levels. Our focus is on delivering results, fostering a supportive community, and ensuring every member has the tools to succeed. At PowerGym, we believe in empowering individuals to live healthier, more active lives.
+          </p>
+          <button className='learn-more' onClick={() => navigate('/about')}>LEARN MORE</button>
+        </div>
+        <div className="welcome-images">
+          <div className="image-column">
+            <img src={section3Img} alt="Fitness Equipment" className="welcome-image"/>
+            <img src={section3Img3} alt="Personal Training Session" className="welcome-image"/>
+          </div>
+          <img src={section3Img2} alt="Group Workout" className="welcome-image-large"/>
+        </div>
+      </section>
 
-{/* Perfect Plan Section */}
-<section className='perfect-plan'>
-  <div className='perfect-plan'>
-    <h2>Choose Your Perfect Plan</h2>
-    <center>
-      <p>PowerGym offers flexible memberships to match your fitness goals. Whether you're starting out or looking for premium access, find the perfect plan for your needs.</p>
-    </center>
+      {/* Perfect Plan Section */}
+      <section className='perfect-plan'>
+        <div className='perfect-plan'>
+          <h2>Choose Your Perfect Plan</h2>
+          <center>
+            <p>PowerGym offers flexible memberships to match your fitness goals. Whether you're starting out or looking for premium access, find the perfect plan for your needs.</p>
+          </center>
 
-    {/* Card Section */}
-    <div className="card-container">
-      {/* Card 1 */}
-      <div className="card">
-        <h3 className="card-title">
-          <span className="basic">Basic</span> <span className="membership">Membership</span>
-        </h3>
-        <p className="card-description">Great for beginners, this plan includes access to essential gym facilities, cardio machines, and free weights.</p>
-        <h2 className="card-price"><span className="price">$29</span> <span className="month">month</span></h2>
-        <button className="get-started">GET STARTED</button>
-      </div>
+          {/* Card Section */}
+          <div className="card-container">
+            {/* Card 1 */}
+            <div className="card">
+              <h3 className="card-title">
+                <span className="basic">Basic</span> <span className="membership">Membership</span>
+              </h3>
+              <p className="card-description">Great for beginners, this plan includes access to essential gym facilities, cardio machines, and free weights.</p>
+              <h2 className="card-price"><span className="price">$29</span> <span className="month">month</span></h2>
+              <center><button className="get-started" onClick={() => navigate('/package')}>GET STARTED</button></center>
+            </div>
 
-      {/* Card 2 - Center Card (Orange color) */}
-      <div className="card center-card">
-        <h3 className="card-title">
-          <span className="basic">Pro</span> <span className="membership">Membership</span>
-        </h3>
-        <p className="card-description">Enjoy full access to gym facilities, join group classes, and receive customized workout plans to help you reach your goals.</p>
-        <h2 className="card-price"><span className="price">$59</span> <span className="month">month</span></h2>
-        <button className="get-started">GET STARTED</button>
-      </div>
+            {/* Card 2 - Center Card (Orange color) */}
+            <div className="card center-card">
+              <h3 className="card-title">
+                <span className="basic">Pro</span> <span className="membership">Membership</span>
+              </h3>
+              <p className="card-description">Enjoy full access to gym facilities, join group classes, and receive customized workout plans to help you reach your goals.</p>
+              <h2 className="card-price"><span className="price">$59</span> <span className="month">month</span></h2>
+              <center><button className="get-started" onClick={() => navigate('/package')}>GET STARTED</button></center>
+            </div>
 
-      {/* Card 3 */}
-      <div className="card">
-        <h3 className="card-title">
-          <span className="basic">Elite</span> <span className="membership">Membership</span>
-        </h3>
-        <p className="card-description">Unlock all facilities, specialized programs, and priority access to exclusive classes for ultimate fitness results.</p>
-        <h2 className="card-price"><span className="price">$99</span> <span className="month">month</span></h2>
-        <button className="get-started">GET STARTED</button>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* Card 3 */}
+            <div className="card">
+              <h3 className="card-title">
+                <span className="basic">Elite</span> <span className="membership">Membership</span>
+              </h3>
+              <p className="card-description">Unlock all facilities, specialized programs, and priority access to exclusive classes for ultimate fitness results.</p>
+              <h2 className="card-price"><span className="price">$99</span> <span className="month">month</span></h2>
+              <center><button className="get-started" onClick={() => navigate('/package')}>GET STARTED</button></center>
+            </div>
+          </div>
+        </div>
+      </section>
 
-{/* Our Trainers */}
+      {/* Our Trainers */}
 <section className='our-trainers'>
   <div className='our-trainers'>
     <h2>Our Trainers</h2>
@@ -221,7 +224,6 @@ function Home() {
     </div>
   </div>
 </section>
-
 
     </div>
   );
