@@ -1,0 +1,145 @@
+@use '../../App.scss' as *;
+.services-header {
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+   
+  }
+  
+  .services-title {
+    color: $primary-color;
+      font-size: 80px;
+      margin-left: 80px;
+      margin-top: 240px;
+      font-family: $font-family-main;
+      margin-bottom: 0;
+  }
+  
+  .services-description {
+    width: 50%;
+        font-family: $font-family-main;
+      color: white;
+      font-size: 16px;
+      margin-left: 80px;
+      margin-top: 20px;
+  }
+  
+  /* Our Services Section */
+  .our-services {
+    padding: 50px 80px;
+  }
+
+  .section-title{
+    font-size: 32px;
+      font-family: $font-family-main;
+      font-weight: 500;
+      color: $text-color;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .our-services-content {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .services-image {
+    width: 600px;
+    height: 337.5px;
+    border-radius: 0px;
+  }
+  
+  .services-paragraph {
+    max-width: 50%;
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 16px;
+    color: $text-color;
+    text-align: justify;
+  }
+  
+  /* What Sets Our Services Apart */
+  .sets-us-apart {
+    padding: 50px 80px;
+  }
+  
+  .apart-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .apart-description {
+    font-family: $font-family-main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  
+  .apart-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .apart-feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .apart-feature img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .apart-feature h4 {
+    font-size: 16px;
+    font-family: $font-family-main;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .apart-feature p {
+    margin: 5px 0 0;
+    line-height: 1.6;
+    font-family: $font-family-main;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(75, 75, 75);
+  }
+  
+  .services-image-right {
+    max-width: 40%;
+    border-radius: 0px;
+    width: 600px;
+    height: 600px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .services-header {
+      height: 500px;
+    }
+  
+    .our-services-content,
+    .apart-content {
+      flex-direction: column;
+    }
+  
+    .services-image,
+    .services-image-right {
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,119 @@
+@use '../../App.scss' as *;
+
+.footer {
+  width: 100%;
+  height: 398px;
+  background-color: $footer-color;
+  color: white;
+  padding: 40px 80px;
+
+  .footer-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-column {
+      flex: auto;
+      padding: 0 60px;
+
+      .footer-logo {
+        width: 250px;
+        height: 40px;
+        margin-bottom: 10px;
+      }
+
+      .footer-tagline {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .footer-follow-us {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 40px 0;
+        margin-bottom: 0;
+        color: $text-color;
+      }
+
+      .footer-social-icons img {
+        margin-top: 0;
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+      }
+
+      .footer-heading {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        color: $text-color;
+        white-space: nowrap;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 5px 0;
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        img {
+          width: 15px;
+          margin-right: 10px;
+        }
+
+        // Prevent location from wrapping to a new line
+        &:nth-child(3) {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 302px;
+        }
+      }
+
+      .footer-hours {
+        margin: 5px 0;
+        font-size: 15px;
+        white-space: nowrap;  // Prevent wrapping
+        overflow: hidden;     // Hide overflow content
+        text-overflow: ellipsis; // Add ellipsis if text is too long
+      }
+    }
+  }
+
+  // Footer bottom styles
+  .footer-bottom {
+    padding-top: 60px;
+    text-align: center;
+    
+    hr {
+      width: 1280px;
+      border: 1px solid rgb(46, 46, 46);
+      margin: 0 auto; 
+
+    .footer-copyright {
+      font-size: 14px;
+      color: $text-color;
+      margin-top: 10px;
+      font-family: $font-family-main;
+    }
+  }
+}
+}

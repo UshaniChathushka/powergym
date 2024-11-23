@@ -1,0 +1,21 @@
+$primary-color: #F94400; 
+$dark-color: #000;
+$section-bg: #202020; 
+$text-color: white;
+$font-family-main: "Raleway", sans-serif;
+$font-family-second: "Teko", sans-serif;
+$font-family-thrid: "Audiowide", serif;
+$footer-color:#0B0B0B;
+
+* {
+
+  padding-top: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  color: $text-color;
+  background-color: $dark-color;
+}

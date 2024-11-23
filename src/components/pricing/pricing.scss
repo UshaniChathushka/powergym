@@ -1,0 +1,190 @@
+/* General Styles */
+@use '../../App.scss' as *;
+
+.pricing-header {
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.pricing-title {
+  color: $primary-color;
+  font-size: 80px;
+  margin-left: 80px;
+  margin-top: 240px;
+  font-family: $font-family-main;
+  margin-bottom: 0;
+}
+
+.pricing-description {
+  width: 50%;
+  font-family: $font-family-main;
+  color: white;
+  font-size: 16px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+/* Join the PowerGym Family Section */
+.join-family {
+  text-align: center;
+  margin: 50px 80px;
+}
+
+.join-heading {
+  margin-top: 60px;
+  font-family: $font-family-main;
+  font-size: 32px;
+  font-weight: 500;
+  color: $text-color;
+}
+
+.power {
+  font-family: $font-family-thrid;
+  color: $primary-color;
+}
+
+.gym {
+  font-family: $font-family-thrid;
+  color: $text-color;
+}
+
+.family-description {
+  max-width: 80%;
+  line-height: 1.8;
+  font-weight: 300;
+  font-size: 16px;
+  color: $text-color;
+  text-align: center;
+}
+
+/* Pricing Cards Section */
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 20px;
+}
+
+.card {
+  background-color: #0e0e0e;
+  width: 300px;
+  height: 520px;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-title {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.basic {
+    font-family: $font-family-main;
+    font-size: 24px;
+  color: $primary-color;
+}
+
+.membership {
+    font-family: $font-family-main;
+    font-size: 24px;
+  color: white;
+}
+
+.card-description {
+  text-align: justify;
+  font-size: 12px;
+  font-family: $font-family-main;
+  margin: 0px 0;
+}
+
+.card-price {
+  text-align: start;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.price {
+  text-align: start;
+  font-family: $font-family-second;
+  font-size: 36px;
+  font-weight: 500;
+  color: $text-color;
+}
+
+.per-month {
+  font-family: $font-family-second;
+  font-size: 20px;
+  color: white;
+}
+
+.card-perks {
+    font-family: $font-family-main;
+    font-size: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.card-perks li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.card-perks img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Get Started Button */
+.card-button {
+  width: 200px; /* Fixed width for consistency */
+  height: 40px; /* Fixed height */
+  background-color: $primary-color;
+  border: none;
+  color: #fff;
+  font-size: 14px; /* Ensure consistent font size */
+  font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto; /* Ensures button stays at the bottom */
+  align-self: center; /* Ensures button is centered horizontally */
+  box-sizing: border-box; /* Prevent padding and borders from affecting width */
+}
+
+.card-button:hover {
+  background-color: rgb(181, 71, 31);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pricing-header {
+    height: 500px;
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
